@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <style>
+      /* Navigation bar styles */
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        font-size: 16px;
+      }
+  
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+
+    body {
+      background-image: url("https://www.hdwallpapers.in/thumbs/2021/plain_sage_green_hd_sage_green-t2.jpg");
+
+    }
+
+      .panel-heading  {
+        text-align: center;
+      }
+  
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+  
+      /* Style the active link */
+      .active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      /* Center align the text within h1 tag */
+      .center-align {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="#" href="#"><u>EasyServe</u></a>
+      <a href="aboutus.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="find.html">Find</a>
+      <a href="index3.html">Register</a>
+    </div>
+  
+    <!-- Page content -->
+    <div style="padding:20px">
+      <h1 class="center-align">Register yourself as a service agent!</h1>
+      <p>Receive more contracts!</p>
+    </div>
+
+  
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1>REGISTER AS A SERVICE PROVIDER</h1>
+          </div>
+          <div class="panel-body">
+            <form action="connect.php" method="post">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <div>
+                  <label for="male" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="m"
+                      id="male"
+                      required
+                    />Male</label
+                  >
+                  <label for="female" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="f"
+                      id="female"
+                      required
+                    />Female</label
+                  >
+                  <label for="others" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="o"
+                      id="others"
+                      required
+                    />Others</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter a password (min. 8 characters)"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="number"
+                  name="number"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="profession">Profession</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="profession"
+                  name="profession"
+                  placeholder="Enter your profession"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  name="city"
+                  placeholder="Enter your city"
+                  required
+                />
+              </div>
+              <input type="submit" class="btn btn-primary" value="Submit" />
+              <!-- Rest of the code... -->
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Added images -->
+    <div class="container">
+      <div class="row">
+        
+       
+      </div>
+    </div>
+    
+    
+    <footer> 
+      <nav> 
+            
+<p> 
+ <a href= "#">About Us</a>| 
+  <a href= "#">Privacy Policy</a>| 
+              <a href= "#">Careers</a> 
+          </p>
+
+      </nav> 
+        
+<p>Some rights reserved</p>
+
+  </footer> 
+  </body>
+</html>

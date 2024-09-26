@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Service Finder</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <style>
+      /* Navigation bar styles */
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        font-size: 16px;
+      }
+      body {
+        background-color: paleturquoise;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .message {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        width: 50%;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      /* Style the active link */
+      .active {
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="#" href="#"><u>EasyServe</u></a>
+      <a href="aboutus.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="find.html">Find</a>
+      <a href="index.html">Register</a>
+    </div>
+
+    <!-- Page content -->
+    <div style="padding:20px">
+      <h1>SERVICE FINDER</h1>
+      <p>Service at your doorstep!!</p>
+    </div>
+
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Home Service Required? No More Worries!</h1>
+          </div>
+          <div class="panel-body">
+            <form onsubmit="event.preventDefault(); findService();">
+              <div class="form-group">
+                <label for="service">Service</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="service"
+                  name="service"
+                />
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  name="city"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">FIND</button>
+            </form>
+          </div>
+          <div id="output" class="message"></div>
+          <div class="panel-footer text-right">
+            <small></small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script>
+      function findService() {
+  var service = document.getElementById("service").value;
+  var city = document.getElementById("city").value;
+
+  fetch("service.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      service: service,
+      city: city,
+    }),
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error("Error: " + response.status);
+      }
+    })
+    .then(function (data) {
+      var output = document.getElementById("output");
+      output.innerHTML = data;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+    </script>
+  </body>
+</html>
